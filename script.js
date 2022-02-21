@@ -129,6 +129,7 @@ function eraseIncorrect(p1, p2){
 }
 
 function clearBoard(){
+    $(".newGame").text("new game");
     possible = [];
     for(let i=0;i<possibleReload.length;i++){
         possible.push(possibleReload[i]);
