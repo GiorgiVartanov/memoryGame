@@ -1,0 +1,285 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Roboto:wght@900&display=swap');
+:root{
+    --size: 5rem;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: linear-gradient(90deg, #30353f, #282F3B);
+    height: 100vh;
+    overflow: hidden; 
+}
+header{
+    width: 80%;
+    margin: 4vh auto;
+    display: flex;
+}
+h1{
+    justify-self: left;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    margin-right: auto;
+}
+label{
+    text-transform: capitalize;
+}
+
+.settingsScreen{
+    position: absolute;
+    display: none;
+
+    font-family: 'Poppins', sans-serif;
+    color: #282F3B;
+    top: 20vh;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: auto;
+    background-color: #F1F2F5;
+    padding: 0.5rem;
+    box-shadow: 0 0 20px #282F3B;
+}
+.settingsScreen div{
+    padding: 0.5rem;
+    background-color: #F1F2F5;
+    border: 0.1rem solid #5a5b5e83;
+    padding: 0.5rem;
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+    /* margin-bottom: 0.5rem; */
+}
+.settingsScreen div label{
+
+}
+.volumeSettings{
+    margin-top: 0.5rem;
+}
+.settingsWrapper{
+    border: none !important;
+    padding: 0 !important;
+}
+.closeSettings{
+    margin-left: auto;
+    position: relative;
+    /* left: 0.5rem; */
+    background-color: #FAC32C;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+    height: 2rem;
+    width: 2rem;
+    line-height: 1.5rem;
+    user-select: none;
+    border: none;
+    color: white;
+    margin-bottom: 0.5rem;
+    transition: 0.3s ease-in-out;
+    /* outline: 2px solid #fac32c00; */
+}
+.closeSettings:hover, .closeSettings:active{
+    color: #FAC32C;  
+    background-color: #F1F2F5;
+    /* outline: 2px solid #FAC32C; */
+    height: 1.9rem;
+    width: 1.9rem;
+    border: 0.15rem solid #FAC32C;
+    margin-bottom: 0.6rem;
+    /* cursor: pointer; */
+}
+
+.winScreen{
+    position: absolute;
+    display: none;
+    
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    letter-spacing: 0.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 1rem 5rem;
+    top: 20vh;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: auto;
+    border-radius: 1.5rem;
+    box-shadow: 0 0 20px #282F3B;
+    
+    background-color: #FAC32C;
+}
+
+.settings,
+.newGame{
+    text-transform: capitalize;
+    justify-content: right;
+    font-size: 1.2rem;
+    margin-left: 1rem;
+    padding: 0.7rem 1.25rem;
+    border-radius: 1rem;
+    border: none;
+    transition: 0.3s ease-in-out;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    white-space: nowrap;
+}
+.settings:hover,
+.newGame:hover{
+    /* cursor: pointer; */
+    /* transform: scale(1.03); */
+}
+
+.settings{
+    background-color: #FAC32C;
+    color: white;
+}
+.settings:hover{
+    background-color: white;
+    color: #FAC32C;
+}
+.newGame{
+    background-color: #F1F2F5;
+    color: #000F24;
+}
+.newGame:hover{
+    background-color: #000F24;
+    color: #F1F2F5;
+}
+
+
+main{
+    width: 70%;
+    margin:  9vh auto;
+    min-width: 300px;
+    display: grid;
+    grid-template-columns: repeat(4, var(--size));
+    grid-template-rows: repeat(8, var(--size));;
+    grid-gap: 0.75rem;
+    /* display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap; */
+    justify-content: center; 
+    
+}
+.panel{
+    /* width: 5rem;
+    height: 5rem; */
+    
+
+    user-select: none;
+    border-radius: 5rem;
+    background-color: white;
+    transition: 0.3s ease-in;
+    line-height: var(--size);
+    text-align: center;
+    color: #30353f;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.panel:hover,
+.panel:active{
+    background-color: rgb(224, 224, 224);
+    /* cursor: pointer; */
+}
+
+.found,
+.found:hover,
+.found:active{
+    background-color: #FAC32C !important;
+    pointer-events: none;
+}
+
+.onIt,
+.onIt:hover,
+.onIt:active{
+    background-color: #cecece !important;
+    pointer-events: none;
+}
+
+
+.timer{
+    left:0;
+    right:0;
+    margin: auto;
+    min-width: 300px;
+    height: 4rem;
+    position: absolute;
+    bottom: 5vh;
+    justify-content: center;
+    display: flex;
+    gap: 2rem;
+}
+.time,
+.moves{
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 2px solid white;
+    border-radius: 2rem;
+    height: 100%;
+    width: 10rem;
+    line-height: 4rem;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    color: white;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 600px){
+    body{
+        overflow: scroll;
+        overflow-x: hidden;
+    }
+    header{
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        gap: 2vh;
+        margin: 1.5vh auto;
+    }
+    header h1{
+        margin: 0;
+    }
+    header button{
+        margin: 0 !important; /*why do I need !important here*/
+    }
+    main{
+        margin: 2vh auto;
+        /* width: 85%; */
+    }
+
+    .timer{
+        position: fixed;
+        bottom: 0;
+        gap: 0;
+        height: 2.2rem;
+    }
+    .timer div{
+        background-color: rgba(131, 131, 131, 0.8);
+        border-radius: 0;
+        line-height: 2.2rem;
+    }
+    .time{
+        margin-right: -1px;
+    }
+    .moves{
+        margin-left: -1px;
+    }
+}
+@media screen and (max-width: 400px){
+    :root{
+        --size: 4rem;
+    }
+}
+
+/* @media screen and (max-width: 400px){
+    main{
+        grid-template-columns: 5rem 5rem 5rem 5rem;
+        grid-template-rows: 5rem 5rem 5rem 5rem;
+    }
+    .panel{
+        
+    }
+} */

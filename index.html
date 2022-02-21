@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="George Vartanov">
+    <link rel="stylesheet" href="style.css">
+    <title>Memory Game</title>
+</head>
+<body>
+    <div class="winScreen">
+        <h2>you won!</h2>
+    </div>
+    <div class="settingsScreen">
+        <div class="settingsWrapper">
+            <button class="closeSettings">X</button>
+        </div>    
+        <div class="boardSizeSettings">
+            <label for="boardSize">board size</label>
+            <input type="range" name="boardSize" step="1" min="0" max="5">
+        </div>
+        <div class="volumeSettings">
+            <label for="volume">volume</label>
+            <input type="range" name="volume">
+        </div>
+    </div>
+    <header>
+        <h1>memory</h1>
+        <button class="newGame">new game</button>
+        <button class="settings">settings</button>
+    </header>
+    <main>
+        <!-- <div class="panel"></div>
+        <div class="panel"></div>
+        <div class="panel"></div>
+        <div class="panel"></div>
+        <div class="panel"></div>
+        <div class="panel"></div>
+        <div class="panel"></div>
+        <div class="panel"></div>
+        <div class="panel"></div>
+        <div class="panel"></div>
+        <div class="panel"></div>
+        <div class="panel"></div>
+        <div class="panel"></div>
+        <div class="panel"></div>
+        <div class="panel"></div>
+        <div class="panel"></div> -->
+    </main>
+    <div class="timer">
+        <div class="time">00:00</div>
+        <div class="moves">0</div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
